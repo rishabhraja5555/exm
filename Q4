@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>4</title>
+</head>
+
+<frameset rows="20%,80%">
+        <frame src="frame1.html" name="frame1">
+        <frameset cols="25%,75%">
+                <frame src="frame2.html" name="frame2">
+                <frame name="frame3">
+        </frameset>
+</frameset>
+
+</html>
