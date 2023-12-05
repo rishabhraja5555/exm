@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8</title>
+    <style>
+        button {
+            border: none;
+            background: rgb(59, 132, 160);
+            font-size: inherit;
+            padding: 1vh;
+        }
+
+        #form_div{
+            margin-left: 10vw;
+            margin-top: 5vw;
+            margin-right: 10vw;
+            border: 2px solid black;
+            padding: 3vw;
+        }
+
+        #check_box_field{
+            border: 1px solid black;
+            padding-left: 2vw;
+            margin-bottom: 3vw;
+        }
+
+        #sub:hover {
+            background: rgb(82, 204, 82);
+        }
+
+        #re:hover {
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="form_div">
+
+        <h1>Student Registration Form</h1>
+        <form>
+
+            <input type="text" placeholder="First Name" id="first_name" title="Enter Your First Name." required>
+            <input type="text" placeholder="Last Name" id="last_name" title="Enter Your Last Name." required><br><br>
+            <input type="text" placeholder="Roll Number" id="rollno" title="Enter Your Roll Number." required><br><br>
+
+            <input type="radio" name="gender" value="Male" title="What is your Gender?" required>
+            <label for="Male">Male</label><br>
+            <input type="radio" name="gender" value="Female" title="What is your Gender?">
+            <label for="Female">Female</label><br>
+            <input type="radio" name="gender" value="Others" title="What is your Gender?">
+            <label for="Others">Others</label><br><br>
+
+            <label for="birthday">Date of Birth</label>
+            <input type="date" id="birthday" title="Choose your DOB." required><br><br>
+
+            <div id="check_box_field">
+                <p>Check the box for the level of qualification you have completed till now.</p>
+                <input type="checkbox" name="checkbox" required>
+                <label for="checkbox">Secondary</label>
+                <input type="checkbox" name="checkbox">
+                <label for="checkbox">High School</label>
+                <input type="checkbox" name="checkbox">
+                <label for="checkbox">Senior Secondary</label><br><br>
+            </div>
+
+            <label for="dropdown">Choose Language</label>
+            <select name="dropdown" title="Choose the Language you want to study in." required>
+                <option value="none">select</option>
+                <option value="English">English</option>
+                <option value="Hindi">Hindi</option>
+            </select>
+
+            <br><br>
+            <button id="re" type="reset" title="Reset the form.">Reset</button>
+            <button id="sub" type="submit" title="Submit the form." onclick="check()">Submit</button>
+        </form>
+        <p id="result"></p>
+    </div>
+
+    <script>
+function is_alphabetical(value){
+    // this function checks if there is any character other than alphabets
+    // if there is then return false otherwise true.
+
+    for (let char of value){
+            char = char.toLowerCase();
+            if(("a".charCodeAt() <= char.charCodeAt() || char.charCodeAt() >= "z".charCodeAt()) == false){
+                return false
+            }
+    }
+    return true
+}
+
+function check() {
+
+    // we have taken roll number as string as to check for the number of digits
+    // strings would be shortest way.
+
+    let roll = document.getElementById('rollno').value;
+    roll = roll.length; 
+    
+    // check number of digits in roll number
+    if(roll == 7){
+
+        // check first name
+        if(is_alphabetical(document.getElementById('first_name').value)  == true){
+            
+            // if first name is correct then check last name.
+            if(is_alphabetical(document.getElementById('last_name').value) == true){
+                
+                // all the data is correct and can be submitted.
+                document.write("<h2>All the details were correct and your form has been submitted successfully.</h2>")
+            }
+
+            else{
+
+                // print the error for the last name
+                alert("Invalid Input: The last name must have alphabets only.")
+            }
+        }
+
+        else{
+
+            // print the error for the first name
+            alert("Invalid Input: The first name must have alphabets only.")
+        }
+    }
+
+    else{
+
+        // print the error for the roll number
+        if( roll != ""){
+            alert("Invalid Input: Roll number must have 7 digits!!")
+        }
+    }
+}  
+    </script>
+</body>
+
+</html>
