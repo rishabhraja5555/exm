@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6</title>
+
+    <style>
+        /* css reset
+        body{
+            margin: 0;
+            padding: 0;
+        } */
+
+        .navbar {
+            overflow: hidden;
+            background-color: cyan;
+        }
+
+        /* navbar links */
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: Black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* dropdown container */
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        /* Dropdown buttons */
+        .dropdown .dropdownbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: black;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 5px;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropdownbtn {
+            background-color: red;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            min-width: 100px;
+            box-sizing: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            background-color: lightgray;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+
+        .dropdown-content a:hover {
+            background-color: red;
+            margin: 5px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        #heading {
+            font-size: inherit;
+            padding-top: 0.5vh;
+            padding-bottom: 0.5vh;
+            /* padding-left: 70vh; */
+            background: lightsalmon;
+            margin-bottom: 1vh;
+            text-align: center;
+        }
+        
+        #img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 55%;
+            height: auto;
+            ;
+        }
+
+        #paragraph{
+            padding:2vh 2vh 2vh 2vh;
+            background-color: aqua;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: inherit;
+            text-align: center;
+        }
+
+        .courses{
+            margin-bottom: 2vh;
+            text-align: center;
+            /* padding-top: -1vh;
+            padding-bottom: 5vh;
+            margin-right: 30vh;
+            margin-left: 30vh;
+            
+            border: 2px solid black; */
+        }
+        .courses h1{
+            font-size: 2vw;
+        }
+        .courses a{
+            padding: 1vh;
+            margin-bottom: 3vh;
+            color: black;
+            font-size: 2vw;
+            text-decoration: none;
+        }
+        .courses a:hover{
+            color: white;
+            background-color: red;
+        }
+    </style>
+
+    <script src="https://kit.fontawesome.com/fe5a5179d2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div>
+        <div id="heading">
+            <h1>Computer Science Department.</h1>
+        </div>
+        <nav class="navbar">
+            <div class="dropdown">
+                <button class="dropdownbtn">Faculty
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="https://www.andcollege.du.ac.in/uploads/departments/Computer%20Science/Nishu%20Singh_Faculty_Profoma.pdf" target="_blank">Prof. Nishu</a>
+                    <a href="https://www.andcollege.du.ac.in/uploads/departments/Computer%20Science/Faculty_Proforma_preetimarwaha.pdf" target="_blank">Dr. Preeti Marwaha</a>
+                    <a href="https://www.andcollege.du.ac.in/uploads/departments/Mathematics/2.%20Dr.%20Vatsla%20Kohli.pdf" target="_blank">Dr. Vatsla Kohli</a>   
+                    <a href="https://www.andcollege.du.ac.in/uploads/departments/Physics/RACHNA%20JOSHI-Faculty_Proforma_2023.pdf" target="_blank">Prof. Rachna Joshi</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdownbtn">Courses
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="dropdown-content">
+            <a href="#undergraduate">Undergraduate</a>
+            <a href="#bycollege">By Our college</a>
+            </button>
+                </div>
+            </div>
+        </nav>
+
+        <img id="img" src="https://andcollege.du.ac.in/albumImage/13/original/e11dfe22e077668e51491ce8d0da3ecf.jpg" alt="college image">
+
+        
+        <p id="paragraph">
+            Department of Computer Science has been a very vital and imperative part of the college. It has been actively
+            participating in the grooming of students as well as providing them with enormous opportunities time and
+            again. It has diligent faculty members (click Faculty tab for details) who constantly nurture and guide the
+            students to achieve high standards of education in the field of Computer Science. They are supported by
+            non-teaching staff (click non-Teaching tab for details). The students are taught various papers of Computer
+            Science like Theory of Computation, Design and Analysis of Algorithm, Architecture and Logic Design of
+            Computers, Programming Languages, Compilers, Operating System, Graphics, Database Management Systems, Data
+            Mining, Artificial Intelligence and many more. For overall development English and Environmental Science
+            have also been included in the curriculum. The dedication of the teachers and the hard work of the students
+            brings good results and meritorious positions in the University every year. The goal of the Department is to
+            prepare students not only for long-term technical leadership in industry but also for a possible research
+            career while focussing on innovative ideas.
+
+            The Department offers two undergraduate courses viz., B.Sc. (Honours) Computer Science and B.Sc. Program
+            with Computer Science. It has three state-of-the-art computer laboratories that are available to the
+            students at all times including vacations. The laboratories are equipped with around 75 latest configuration
+            desktop computers, few servers and printers. This infrastructure ensures that each student gets individual
+            access to a computer system. These systems are connected via LAN and allow access to internet via university
+            provided network.
+
+            To encourage students to explore alternate computing environments, two labs have been converted to run under
+            the Ubuntu Operating System emphasizing on Free Open-Source Software Systems (FOSS) applications. One
+            laboratory has single-mode Ubuntu machines and the other has dual-mode (Ubuntu and Windows) machines. This
+            has been done because Ubuntu is a robust operating system, both virus free and crash free and its source
+            code is available on Internet for everyone to explore and learn from.
+        </p>
+        
+        <div class="courses">
+            <h1 id="undergraduate">Undergraduate Courses offered by Our Department</h1>
+            <a href="https://drive.google.com/file/d/1YLyMm7-1oP-Zk2P2oRq3T5qDskgs6qOj/view?usp=share_link" target="_blank">B. Of Sc.(Honours) in Computer Science</a>
+            <a href="https://drive.google.com/file/d/13caUMgpDAJi0SAHD1vX13BYKphVROpxY/view?usp=share_link" target="_blank">B. Of Sc.(Prog) Computer Science with Physical Sciences</a>
+        </div>
+        <div class="courses">
+            <h1 id="bycollege">Other Courses offered by our College</h1>
+            <a href="https://www.andcollege.du.ac.in/courses/postgraduate">Postgraduate</a>
+            <a href="https://www.andcollege.du.ac.in/courses/foreignlanguage">Foreign Languages</a>
+            <a href="https://www.andcollege.du.ac.in/courses/addon">Add On</a>
+        </div>
+            
+    </div>
+
+</body>
+
+</html>
