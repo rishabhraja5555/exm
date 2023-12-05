@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+    <style>
+        button{
+            border: none;
+            background: rgb(59, 132, 160);
+            font-size: inherit;
+            padding: 1vh;
+        }
+
+        #sub:hover{
+            background: rgb(82, 204, 82);
+            color: black;
+        }
+        #re:hover{
+            background: red;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div style="margin-left: 10vw;
+    margin-top: 5vw;
+    margin-right: 10vw;
+    border: 2px solid black;
+    padding: 3vw;">
+
+        <h1>Student Registration Form</h1>
+        <form onsubmit="submit()">
+
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name"><br><br>
+            
+            <input type="radio" name="gender" value="Male">
+            <label for="Male">Male</label><br>
+            <input type="radio" name="gender" value="Female">
+            <label for="Female">Female</label><br>
+            <input type="radio" name="gender" value="Others">
+            <label for="Others">Others</label><br><br>
+
+            <label for="birthday">Date of Birth</label>
+            <input type="date" id="birthday"><br><br>
+
+            <div style="border: 1px solid black;
+            padding-left: 2vw;
+            margin-bottom: 3vw;">
+                <p>Check the box for the level of qualification you have completed till now.</p>
+                <input type="checkbox" name="checkbox">
+                <label for="checkbox">Secondary</label>
+                <input type="checkbox" name="checkbox">
+                <label for="checkbox">High School</label>
+                <input type="checkbox" name="checkbox">
+                <label for="checkbox">Senior Secondary</label><br><br>
+            </div>
+
+            <label for="dropdown">Choose Language</label>
+            <select name="dropdown">
+                <option value="none">select</option>
+                <option value="English">English</option>
+                <option value="Hindi">Hindi</option>
+            </select>
+            
+            <br><br>
+            <button id="re" type="reset">Reset</button>
+            <button id="sub" type="submit">Submit</button>
+            <div>
+
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
