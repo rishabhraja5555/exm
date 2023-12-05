@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table</title>
+
+    <style>
+        #main{
+            font-size: inherit;
+            margin-top: 10vh;
+            margin-left: 10vh;
+        }
+        input{
+            margin-bottom: 3vh;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="main">
+        <form >
+            
+            <h1>Enter the number you want multiplication table of:</h1>
+            multiply = <input type="text" name="multiply" id="multiply">
+            <button type="submit" onclick="multiplication();">Print</button>
+        
+        </form>
+    </div>
+
+    <script>
+
+        function multiplication(){
+            var multiply = document.getElementById('multiply').value;
+            document.write("Multiplication Table of " + multiply.toString() + '<br><br>')
+            const answer = [];
+            for(let i = 1; i<=10; i++){
+                m = i*multiply;
+                variable = multiply.toString() + " x " + i.toString() + ' = ' + m.toString()
+                answer.push(variable);
+                        
+            }
+
+            for(i = 0; i<answer.length; i++){
+                document.write(answer[i]+'<br>');
+                }
+            greatest(); 
+        }
+
+    </script>
+
+</body>
+
+</html>
