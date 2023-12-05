@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum and Average</title>
+    <style>
+        #main{
+            font-size: inherit;
+            margin-top: 10vh;
+            margin-left: 10vh;
+        }
+        input{
+            margin-bottom: 3vh;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="main">
+
+        <h1>This page will take input using prompt. Click the button to start</h1>
+        <button type="submit" onclick="using_prompt()">Start</button>
+        <h2 id="add"></h2>
+        <h2 id="avg"></h2>
+    </div>
+
+    <script>
+
+        function using_prompt(){
+            var sum = 0;
+            var average = 0;
+            var arr = prompt('Enter the Array in the given format','1 2 3 4 5 6 7')
+            
+            to_use = arr.split(' ')
+            console.log(to_use)
+            
+            for(let i=0; i<(to_use.length); i++){
+                sum = sum + Number(to_use[i]);
+            }
+            average = sum/to_use.length
+            document.getElementById('add').innerHTML = 'The Sum is ' + sum.toString()
+            document.getElementById('avg').innerHTML = '& the average is ' + average.toString()
+        }
+        
+    </script>
+
+</body>
+
+</html>
